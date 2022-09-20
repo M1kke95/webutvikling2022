@@ -9,6 +9,34 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+
+#front-page-container{
+    display: grid;
+    grid-template-areas: "header" 
+                         "main" 
+                         "aside" 
+                         "footer";
+    grid-template-columns: 1fr;
+
+}
+
+header{
+    grid-area: header;
+}
+
+main{
+    grid-area: main;
+}
+
+aside{
+    grid-area: aside;
+}
+
+footer{
+    grid-area: footer;
+}
+
+
 header nav a{
     color:#000;
     text-decoration: none;
@@ -24,7 +52,7 @@ nav{
     padding: 2rem;
 }
 
-#front-page-container{
+/*#front-page-container{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -33,15 +61,15 @@ nav{
                         "main main aside" 
                         "footer footer footer";
     grid-gap: 1rem;
-    grid-row-gap: 1rem;*/
+    grid-row-gap: 1rem;
 
 }
 header{
-    /*grid-area: header;*/
+    /*grid-area: header;
     grid-area: 1/1/2/4;
 }
 main{
-    /*grid-area: main;*/
+    /*grid-area: main;
     grid-column-start: 1;
     grid-row-start: 2;
     grid-column-end: 3;
@@ -61,7 +89,7 @@ main{
 
     /*kunne og skrevet: 
     grid-area: col-1;
-    */
+    
     grid-area: 1/1/2/2;
 
 }
@@ -73,7 +101,7 @@ main{
 
     /*kunne og skrevet: 
     grid-area: col-2;
-    */
+    
     
 }
 #article-3{
@@ -84,19 +112,19 @@ main{
     
     /*kunne og skrevet: 
     grid-area: col-3;
-    */
+    
 
 }
 
 aside{
-    /*grid-area: aside;*/
+    /*grid-area: aside;
     grid-column-start: 3;
     grid-row-start: 2;
     grid-column-end: 4;
     grid-row-end: 3;
 }
 footer{
-    /*grid-area:footer;*/
+    /*grid-area:footer;
     grid-column-start: 1;
     grid-row-start: 3;
     grid-column-end: 4;
@@ -105,12 +133,12 @@ footer{
 
 
 main article{
-    /*endret vidde bredde fra hva vi gjorde 05.08*/
+    /*endret vidde bredde fra hva vi gjorde 05.08
     max-width: 250px;
     width: 100%;
     border: 1px solid #d9d9d9;
     padding: 1rem;
-}
+}*/
 
 /*la til bredcrumbs og fjernet default CSSS på ul elementet med id breadcrumbs*/
 #breadcrumbs{
@@ -159,7 +187,7 @@ main article{
   }
 
 article img{
-    /*Det er ikke optimalt å gjøre et mindre bilde større på denne måten, men dette er ment til øving så det er greit!*/
+   /* Det er ikke optimalt å gjøre et mindre bilde større på denne måten, men dette er ment til øving så det er greit!*/
     width: 100%;
 }
 
@@ -168,7 +196,21 @@ footer{
     background-color: rgb(80, 80, 80);
     color: #fff;
     padding: 3rem 2rem;
-}
+}*/
 
+@media only screen (min-width: 900px) {
+#front-page-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header header header" 
+                         "main main aside" 
+                         "footer footer footer";
+        grid-gap: 1rem;
+        grid-row-gap: 1rem;
+}
+    
+}
 
 
