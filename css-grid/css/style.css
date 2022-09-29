@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;1,100&family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,500&display=swap');
 /*Her stoppet vi i forelesningen*/
 /**/
@@ -24,8 +25,35 @@ header{
     grid-area: header;
 }
 
+#main-menu{
+    position: absolute;
+    top: 108px; 
+    left: 0;
+    background-color: #000;
+    width: 100%;
+    padding: 1rem;
+    opacity: 0.8;
+    
+}
+
+#main-menu a{
+    color: whitesmoke;
+    padding: 1rem 0;
+    display: inline-block;
+    font-size: calc(0.8em + 0.8vw);
+}
+
+#main-menu li{
+    list-style: none;  
+    
+}
+
+
 main{
     grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 aside{
@@ -50,96 +78,18 @@ nav{
     overflow: auto;
     background-color: #d2dfe1;
     padding: 2rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
 }
-
-/*
-#front-page-container{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    /*grid-template-areas: "header header header" 
-                        "main main aside" 
-                        "footer footer footer";
-    grid-gap: 1rem;
-    grid-row-gap: 1rem;
-
-}
-header{
-    /*grid-area: header;
-    grid-area: 1/1/2/4;
-}
-main{
-    /*grid-area: main;
-    grid-column-start: 1;
-    grid-row-start: 2;
-    grid-column-end: 3;
-    grid-row-end: 3;
-
-    display: grid;
-    grid-template-areas: "col-1 col-2 col-3";
-    justify-content: space-evenly;
-}
-
-#article-1{
-    /*
-    grid-column-start: 1;
-    grid-row-start: 1;
-    grid-column-end: 2;
-    grid-row-end: 2;
-
-    /*kunne og skrevet: 
-    grid-area: col-1;
-    
-    grid-area: 1/1/2/2;
-
-}
-#article-2{
-    grid-column-start: 2;
-    grid-row-start: 1;
-    grid-column-end: 3;
-    grid-row-end: 2;
-
-    /*kunne og skrevet: 
-    grid-area: col-2;
-    
-    
-}
-#article-3{
-    grid-column-start: 3;
-    grid-row-start: 1;
-    grid-column-end: 4;
-    grid-row-end: 2;
-    
-    /*kunne og skrevet: 
-    grid-area: col-3;
-    
-
-}
-
-aside{
-    /*grid-area: aside;
-    grid-column-start: 3;
-    grid-row-start: 2;
-    grid-column-end: 4;
-    grid-row-end: 3;
-}
-footer{
-    /*grid-area:footer;
-    grid-column-start: 1;
-    grid-row-start: 3;
-    grid-column-end: 4;
-    grid-row-end: 4;
-}
-*/
 
 main article{
-    /*endret vidde bredde fra hva vi gjorde 05.08
-    max-width: 250px;
-    width: 100%;
+    /*endret vidde bredde fra hva vi gjorde 05.08*/
+    flex-basis:250px;
+    flex-grow: 1;
     border: 1px solid #d9d9d9;
     padding: 1rem;
-}*/
+}
 
 /*la til bredcrumbs og fjernet default CSSS på ul elementet med id breadcrumbs*/
 #breadcrumbs{
@@ -188,7 +138,7 @@ main article{
   }
 
 article img{
-   /* Det er ikke optimalt å gjøre et mindre bilde større på denne måten, men dette er ment til øving så det er greit!*/
+    /*Det er ikke optimalt å gjøre et mindre bilde større på denne måten, men dette er ment til øving så det er greit!*/
     width: 100%;
 }
 
@@ -197,21 +147,18 @@ footer{
     background-color: rgb(80, 80, 80);
     color: #fff;
     padding: 3rem 2rem;
-}*/
-
-@media only screen (min-width: 900px) {
-#front-page-container{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: "header header header" 
-                         "main main aside" 
-                         "footer footer footer";
-        grid-gap: 1rem;
-        grid-row-gap: 1rem;
 }
-    
+
+.fa-solid.fa-house{
+    font-size: 30px;
+    color: #784e4e;
+    margin: 0 0.5rem;
+}
+
+
+
+.fa-solid.fa-house:hover{
+    color: rgb(247, 80, 80);
 }
 
 @media only screen and (min-width: 900px){
@@ -227,5 +174,45 @@ footer{
         grid-row-gap: 1rem;
     
     }
-}
 
+    header nav{
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+
+    #main-menu li{
+        display: inline-block;
+        margin: 0 1rem;
+    }
+
+    #main-menu{
+        display: block !important;
+        position: static;
+        background-color: transparent;
+        width: fit-content;
+    }
+
+    #main-menu a{
+        color: #000;
+    }
+
+    #ham-icon{
+        display: none;
+    }
+
+    .fa-solid.fa-house{
+        font-size: 30px;
+        color: black;
+        margin: 0 0.5rem;
+    }
+    
+    
+    
+    .fa-solid.fa-house:hover{
+        color:grey;
+    }
+}
+Footer
+
+Footer{}
